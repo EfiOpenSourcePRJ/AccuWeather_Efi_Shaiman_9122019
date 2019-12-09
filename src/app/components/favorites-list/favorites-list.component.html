@@ -1,0 +1,26 @@
+<h3 class="my-3 offset-md-4" *ngIf="favoritesData">Cities List</h3>
+
+
+<div class="container" *ngFor='let items of favoritesData'>
+  <div class="row">
+    <div class="col-md-4 ">
+      <blockquote class="inner-block">
+
+        <p class="block-text">
+          {{items.cityName }},{{items.country}}
+        </p>
+        <hr>
+        <div>
+
+          <p class="">
+            <app-favourite-button [cityKey]='items.key' [country]='items.country'
+              [citiName]='items.cityName'>
+            </app-favourite-button>
+          </p>
+
+        </div>
+      </blockquote>
+    </div>
+  </div>
+</div>
+

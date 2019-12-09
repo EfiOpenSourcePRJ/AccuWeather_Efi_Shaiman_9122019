@@ -1,0 +1,16 @@
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <form class="col-12">
+      <div class="form-group">
+        <h3><span for="formGroupExampleInput" class="badge badge-light">Search Weather By City</span></h3>
+
+        <input type="text" class="form-control" maxlength="100" [ngModelOptions]="{standalone: true}"
+          [(ngModel)]="autoCompleteLocationText" placeholder="enter city" />
+    
+        <button type="button" class="btn btn-info " (click)="GetAutoComplete($event)">Search </button>
+      </div>
+
+
+    </form>
+  </div>
+</div>

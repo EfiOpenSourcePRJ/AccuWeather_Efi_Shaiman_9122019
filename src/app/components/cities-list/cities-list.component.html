@@ -1,0 +1,30 @@
+
+<h3 class="my-3 offset-md-4" *ngIf="isShowLabel">Cities List</h3>
+
+
+<div class="container" *ngFor='let items of retdata'>
+  <div class="row">
+    <div class="col-md-4 ">
+      <blockquote class="inner-block">
+       
+        <p class="block-text">
+         {{items.LocalizedName }},{{items.Country.LocalizedName }}
+        </p>
+        <hr>
+        <div>
+
+          <p class="">
+             <app-favourite-button [cityKey]='items.Key' [country]='items.Country.LocalizedName'
+               [citiName]='items.LocalizedName'>
+             </app-favourite-button>
+          </p>
+         
+        </div>
+      </blockquote>
+    </div>
+  </div>
+</div>
+
+
+
+
