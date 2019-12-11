@@ -7,7 +7,7 @@ import { AccuWeatherApiCallServiceService } from 'src/app/services/accu-weather-
   styleUrls: ["./seach-panel.component.scss"]
 })
 export class SeachPanelComponent implements OnInit {
-  retdata: Object | import("c:/accuWeatherAPI/AccuWeatherClient/src/app/models/AutoCompleteData").AutoCompleteData[];
+  retdata: Object | import("/src/app/models/AutoCompleteData").AutoCompleteData[];
   constructor(private dataProvider: AccuWeatherApiCallServiceService) {}
   autoCompleteLocationText: any;
   ngOnInit() {}
